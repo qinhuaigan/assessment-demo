@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "../node_modules/loopback-objectid-mixin",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "AssessmentDemo"
+  },
+  "AccessToken": {
+    "dataSource": "AssessmentDemo",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "AssessmentDemo",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "AssessmentDemo",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "AssessmentDemo",
+    "public": false
+  },
+  "Container": {
+    "dataSource": "AssessmentDemoFile",
+    "public": true
+  },
+  "storage": {
+    "dataSource": "AssessmentDemo",
+    "public": true
+  },
+  "Achievement": {
+    "dataSource": "AssessmentDemo",
+    "public": true
+  }
+}
