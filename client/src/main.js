@@ -17,9 +17,8 @@ globalData.applicationURL = localStorage.getItem('applicationURL')
 const axios = require('axios')
 const Message = ElementUI.Message
 
-axios.defaults.baseURL = '/api/Containers' // 本地环境
-Vue.prototype.baseURL = '/api/Containers' // 本地环境
-Vue.prototype.fileBaseURL = '/api/Containers' // 本地环境
+axios.defaults.baseURL = 'http://localhost:3000/api' // 本地环境
+Vue.prototype.baseURL = 'http://localhost:3000/api' // 本地环境
 
 // axios.defaults.baseURL = '' // 测试和正式环境
 // Vue.prototype.baseURL = '' // 测试
@@ -322,14 +321,7 @@ Vue.prototype.getSMSCode = function (phone, type) {
   })
 }
 
-Promise.all([Vue.prototype.getGlobalUserPermission(), Vue.prototype.getUserInfo()]).then((result) => {
-  // 保存 "用户权限"
-  Vue.prototype.globalData.userPermission = result[0] || []
-  // 如果是 "游客"，授予默认权限 "企业信息查看/企业认证"
-  if (store.state.userInfo && store.state.userInfo.identity === '游客') {
-    Vue.prototype.globalData.userPermission.push(13, 14)
-  }
-  localStorage.setItem('authorityList', Vue.prototype.globalData.userPermission)
+Promise.all([]).then((result) => {
   /* eslint-disable no-new */
   new Vue({
     el: '#app',

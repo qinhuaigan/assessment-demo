@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="clearfix">
     <div class="tableContent">
-      <el-table @selection-change="selectChange" border @select-all="selectAll" @select="selectRow" :data="datas" ref="multipleTable"
+      <el-table @selection-change="selectChange" @select-all="selectAll" @select="selectRow" :data="datas" ref="multipleTable"
         slot="empty" stripe :cell-style="setStyle">
         <el-table-column align="center" type="selection" width="55" v-if="multipleShow"></el-table-column>
         <el-table-column align="center" fixed="left" type="index" width="55" label="序号" v-if="!hideNumber"></el-table-column>

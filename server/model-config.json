@@ -44,7 +44,7 @@
     "dataSource": "AssessmentDemo",
     "public": true
   },
-  "Achievement": {
+  "Fraction": {
     "dataSource": "AssessmentDemo",
     "public": true
   }

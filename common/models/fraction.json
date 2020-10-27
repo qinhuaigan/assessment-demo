@@ -1,0 +1,108 @@
+{
+  "name": "Fraction",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "createTime": {
+      "type": "date",
+      "required": true,
+      "description": "创建时间"
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "description": "姓名"
+    },
+    "Class": {
+      "type": "string",
+      "required": true,
+      "description": "班级"
+    },
+    "Chinese": {
+      "type": "number",
+      "required": false,
+      "description": "语文成绩"
+    },
+    "Mathematics": {
+      "type": "number",
+      "required": false,
+      "description": "数学成绩"
+    },
+    "English": {
+      "type": "number",
+      "required": false,
+      "description": "英语成绩"
+    },
+    "Physics": {
+      "type": "number",
+      "required": false,
+      "description": "物理成绩"
+    },
+    "Chemistry": {
+      "type": "number",
+      "required": false,
+      "description": "化学"
+    },
+    "Biology": {
+      "type": "number",
+      "required": false,
+      "description": "生物成绩"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "signUp"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "login"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "getFractions"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "addFraction"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "updateFraction"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "deleteFraction"
+    }
+  ],
+  "methods": {}
+}

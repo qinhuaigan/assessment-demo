@@ -1,5 +1,6 @@
 const log4js = require('log4js');
 log4js.configure(require('../../config/log4js'))
+const log = log4js.getLogger('Role');
 const requireData = require('../../json/requireData')
 const {
   postData
@@ -27,6 +28,7 @@ module.exports = function(app) {
         }
         if (msg) {
           error.message = `${msg.substr(0, msg.length - 1)}不能为空`
+          log.error(error)
           return cb(error, false)
         }
       }
@@ -71,6 +73,7 @@ module.exports = function(app) {
         }
         if (msg) {
           error.message = `${msg.substr(0, msg.length - 1)}不能为空`
+          log.error(error)
           return cb(error, false)
         }
       }
@@ -116,6 +119,7 @@ module.exports = function(app) {
         }
         if (msg) {
           error.message = `${msg.substr(0, msg.length - 1)}不能为空`
+          log.error(error)
           return cb(error, false)
         }
       }

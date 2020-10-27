@@ -6,6 +6,8 @@ import {
 import check from '../../utils/check.js'
 
 import test from '../views/test.vue'
+import admin from '../views/admin'
+import adminFraction from '../views/adminFraction'
 
 const Route = Router
 Vue.use(Router)
@@ -14,7 +16,20 @@ const router = new Route({
   routes: [{
     path: '/',
     name: 'test',
+    redirect: '/admin/adminFraction'
+  }, {
+    path: '/test',
+    name: 'test',
     component: test
+  }, {
+    path: '/admin',
+    name: 'admin',
+    component: admin,
+    children: [{
+      path: '/admin/adminFraction',
+      name: 'adminFraction',
+      component: adminFraction
+    }]
   }]
 })
 

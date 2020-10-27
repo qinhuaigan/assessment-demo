@@ -1,10 +1,14 @@
 {
   "description": "在这里配置接口必填字段的验证 // 例如: Union（模块名称）, insertUnion（该模块下的接口名称）, name（接口的 'name' 字段, 'required' 是否必填, 'description' 参数名称）",
-  "Union": {
-    "insertUnion": {
+  "Fraction": {
+    "addFraction": {
       "name": {
         "required": true,
-        "description": "联盟名称"
+        "description": "姓名"
+      },
+      "Class": {
+        "required": true,
+        "description": "班级"
       }
     }
   }
