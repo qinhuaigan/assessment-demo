@@ -4,13 +4,17 @@ import {
   Message
 } from 'element-ui'
 import check from '../../utils/check.js'
+
+import test from '../views/test.vue'
+
 const Route = Router
 Vue.use(Router)
 
 const router = new Route({
   routes: [{
     path: '/',
-    name: 'HelloWorld'
+    name: 'test',
+    component: test
   }]
 })
 
